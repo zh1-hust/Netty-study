@@ -12,6 +12,7 @@
     }
     if (window.WebSocket) {
         socket = new WebSocket("ws://localhost:9090/ws");
+
         socket.onmessage = function(event) {
             var ta = document.getElementById('responseText');
             ta.value = ta.value + '\n' + event.data
@@ -34,6 +35,7 @@
         }
         if (socket.readyState == WebSocket.OPEN) {
             socket.send(message);
+            document.getElementsByName('message')[0].value ='';
         } else {
             alert("连接没有开启.");
         }
@@ -43,8 +45,8 @@
     <h3>WebSocket 聊天室：</h3>
     <textarea id="responseText" style="width: 500px; height: 300px;"></textarea>
     <br>
-    <input type="text" name="message"  style="width: 300px" value="To do a Test">
-    <input type="button" value="发送消息" onclick="send(this.form.message.value)">
+    <input type="text" name="message"  style="width: 300px" value="">
+    <input type="button" value="发送消息" onclick="send(this.form.message.value)"  >
     <input type="button" onclick="javascript:document.getElementById('responseText').value=''" value="清空聊天记录">
 </form>
 <br>

@@ -16,8 +16,8 @@ import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 
 /**
  * descrption: 参考文档：http://blog.csdn.net/kkkloveyou/article/details/44656325
- * authohr: wangji
  * date: 2017-10-14 10:20
+ * @author zhang
  */
 @Slf4j
 public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> {
