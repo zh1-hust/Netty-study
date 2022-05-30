@@ -27,5 +27,5 @@ Thumbs.db
 /target
 /src/main/resources/reporttemplate/*
 /logs/
-/netty-websocket/.idea/
 /netty-websocket/netty-websocket.iml
+/netty-websocket/.idea
